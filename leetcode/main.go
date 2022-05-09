@@ -1,12 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	s := []int{1}
-	for i := 0; i < len(s); i++ {
-		s = append(s, i)
-	}
-	fmt.Println(s)
+	r := make([]int, 10, 11)
+	r = print(r)
+	fmt.Println(r)
 
+}
+
+func print(s []int) []int {
+	s = append(s, 1)
+	s[9] = 9
+	s = append(s, 1)
+	fmt.Println(s)
+	return s
 }
