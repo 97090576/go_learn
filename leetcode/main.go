@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	reverseBits(3)
+	fmt.Println(10 % 10)
 }

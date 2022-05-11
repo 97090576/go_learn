@@ -1,6 +1,7 @@
 package main
 
-// 树的前序遍历--递归法
+// 树的前序遍历
+// 递归法
 func preorderTraversal(root *TreeNode) []int {
 	if root == nil {
 		return []int{}
@@ -10,3 +11,5 @@ func preorderTraversal(root *TreeNode) []int {
 	res = append(res, preorderTraversal(root.Right)...)
 	return res
 }
+
+// 迭代法
