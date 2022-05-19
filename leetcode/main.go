@@ -3,6 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	sum := combinationSum([]int{2, 3, 5}, 8)
+	sum := groupAnagrams([]string{"ate", "eat", "aet"})
 	fmt.Println(sum)
 }
