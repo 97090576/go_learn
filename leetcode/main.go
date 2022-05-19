@@ -3,5 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(10 % 10)
+	sum := combinationSum([]int{2, 3, 5}, 8)
+	fmt.Println(sum)
 }
