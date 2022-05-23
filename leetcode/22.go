@@ -27,23 +27,30 @@ package main
 ////	}
 ////}
 //
-//func generateParenthesis(n int) []string {
-//	res := []string{"("}
-//	l, r := 1, 0
-//	for r < n {
-//		if l == r {
-//			for _, v := range res {
-//				res = append(res, v+"(")
-//				res = res[1:]
-//			}
-//			l++
-//		} else {
-//			for _, v := range res {
-//				res = append(res, v+"(")
-//				res = res[1:]
-//			}
-//			l++
-//		}
-//	}
-//
-//}
+func generateParenthesis(n int) []string {
+	var res []string
+	s := ""
+	var f func(l int, r int)
+	f = func(l int, r int) {
+		if r == 0 {
+			res = append(res, s)
+			return
+		}
+		if l == r {
+			s += "("
+			f(l-1, r)
+			s = s[:len(s)-1]
+		} else {
+			if l > 0 {
+				s += "("
+				f(l-1, r)
+				s = s[:len(s)-1]
+			}
+			s += ")"
+			f(l, r-1)
+			s = s[:len(s)-1]
+		}
+	}
+	f(n, n)
+	return res
+}
