@@ -1,6 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	var m map[int]int
-	m[1]++
+	fmt.Println("Hello, world")
 }
