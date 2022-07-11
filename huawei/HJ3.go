@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func ddddddddd() {
 	var N int
 	fmt.Scan(&N)
 	s := make([]int, 501)

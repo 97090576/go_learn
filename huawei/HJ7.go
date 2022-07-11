@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func ddddddd() {
 	var value float32 = 0.
 	fmt.Scanf("%f", &value)
 	run(value)

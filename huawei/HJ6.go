@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func dddddd() {
 	var input int64
 	fmt.Scan(&input)
 
